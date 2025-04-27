@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>objects</title>
+</head>
+<body>
+
+    <script>
+
+        // const produc = {
+        //     name:'socks',
+        //     price: 1090,
+        // };
+
+        // console.log(produc);
+
+        // console.log(produc['price']);
+
+        // produc.name = 'truc';
+        // console.log(produc);
+
+        // produc.newTruc = false;
+
+        // console.log(produc);
+
+        // delete produc.newTruc;
+
+        // console.log(produc);
+
+        function function2() {
+            console.log('fun 2 ici !');
+        }
+
+        const product2 = {
+            name: 'shirt',
+            'delivery-day': '1 day',
+            rating: {
+                stars: 4.5,
+                count: 677,
+            },
+            fun: function () {
+                console.log('function inside object !')
+            },
+            fun2: function2,
+
+        };
+
+        console.log(product2.fun)
+
+        product2.fun()
+        product2.fun2()
+
+    </script>
+    
+</body>
+</html>

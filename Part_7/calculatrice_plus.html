@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+
+
+    <div>
+        <input type="text" id="result">
+
+    </div>
+
+
+    <div>
+        <button onclick="
+            updateCalculationNum(1)
+        ">1</button>
+
+        <button onclick="
+            updateCalculationNum(2)
+        ">2</button>
+
+        <button onclick="
+            updateCalculationNum(3)
+        ">3</button>
+    </div>
+
+
+    <div>
+        <button onclick="
+        updateCalculationNum(4)
+        ">4</button>
+
+        <button onclick="
+        updateCalculationNum(5)
+        ">5</button>
+
+        <button onclick="
+        updateCalculationNum(6)
+        ">6</button>
+    </div>
+
+    <div>
+        <button onclick="
+        updateCalculationNum(7)
+        ">7</button>
+
+        <button onclick="
+        updateCalculationNum(8)
+        ">8</button>
+
+        <button onclick="
+        updateCalculationNum(9)
+        ">9</button> 
+    </div>
+    
+
+    <div>
+        <button onclick="
+            updateCalculationNum(' + ')
+        ">+</button>
+
+        <button onclick="
+            updateCalculationNum(' * ')
+        ">*</button>
+
+        <button onclick="
+            updateCalculationNum(' / ')
+        ">/</button>
+
+
+    </div>
+
+    <div>
+        <button onclick="
+            updateCalculationNum(' - ')
+            ">-</button>
+
+        <button onclick="
+        calculation = eval(calculation);
+        console.log(calculation);
+        document.querySelector('#result').value = calculation;
+
+
+        
+        ">=</button>
+
+        <button onclick="
+        calculation = '';
+        console.log(calculation);
+        document.querySelector('#result').value = calculation;
+
+
+        ">reset</button>
+
+    </div>
+
+    <script>
+
+        
+
+
+            let calculation = '';
+
+            function updateCalculationNum(arg) {
+                calculation += `${arg}`;
+                console.log(calculation);
+                document.querySelector('#result').value = calculation;
+
+            }
+
+            function updateCalculationSign(arg) {
+                calculation += ` ${arg} `;
+                console.log(calculation);
+                document.querySelector('#result').value = calculation;
+            }
+
+           
+
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>
