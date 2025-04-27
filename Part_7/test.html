@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<p>Choisi une couleur , si l'ordi a la meme tu perds</p>
+
+<button onclick="
+    const ordiChoice = ordiRandomColor();
+
+    let result;
+    if (ordiChoice === 'rouge') {
+        result = 'perdu...';
+    }else {
+        result = 'gagné!';
+    }
+
+    document.querySelector('#result').innerHTML = `ordi a joué : ${ordiChoice} donc tu as ${result}`;
+
+">Rouge</button>
+
+<button onclick="
+
+    const ordiChoice = ordiRandomColor();
+
+    let result;
+    if (ordiChoice === 'vert') {
+        result = 'perdu...';
+    }else {
+        result = 'gagné!';
+    }
+
+document.querySelector('#result').innerHTML = `ordi a joué : ${ordiChoice} donc tu as ${result}`;
+">Vert</button>
+
+<button onclick="
+
+    const ordiChoice = ordiRandomColor();
+
+    let result;
+    if (ordiChoice === 'bleu') {
+        result = 'perdu...';
+    }else {
+        result = 'gagné!';
+    }
+
+    document.querySelector('#result').innerHTML = `ordi a joué : ${ordiChoice} donc tu as ${result}`;
+
+
+">Bleu</button>
+
+<br>
+<br>
+
+
+<div id="result"></div>
+
+<script>
+
+    // choix auto de l'ordi :
+    function ordiRandomColor() {
+        const randomNum = Math.random();
+        let ordiColor;
+
+        if ( randomNum >= 0 && randomNum < (1/3)){
+            ordiColor = 'bleu';
+        }
+        else if ( randomNum >= (1/3) && randomNum < (2/3)){
+            ordiColor = 'vert';
+        }
+        else {
+            ordiColor = 'rouge';
+        }
+
+        return ordiColor;
+    }
+
+
+
+</script>
+    
+</body>
+</html>
